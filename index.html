@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mamadou Coulibaly | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio professionnel de Mamadou Coulibaly, titulaire d'un BTS, specialise en bases de donnees, administration serveur et developpement web."
+    >
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+  <body>
+    <div class="loading-overlay" id="loading-overlay" aria-live="polite" aria-hidden="true">
+      <div class="loading-card" role="status">
+        <div class="loading-logo" aria-hidden="true">MC</div>
+        <p>Chargement en cours</p>
+        <span class="loading-line" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#accueil">Mamadou Coulibaly</a>
+      <nav aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">A propos</a>
+        <a href="#competences">Competences</a>
+        <a href="#projets">Projets</a>
+        <a href="#objectifs">Objectifs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="accueil">
+      <section class="hero">
+        <div class="hero__content">
+          <p class="eyebrow">Administrateur bases de donnees & developpeur web</p>
+          <h1>Mamadou Coulibaly</h1>
+          <p class="hero__text">
+            Portfolio professionnel oriente bases de donnees, administration serveur et developpement web.
+          </p>
+          <div class="hero__actions" aria-label="Actions">
+            <a class="button button--primary" href="#contact">Me contacter</a>
+            <a class="button button--secondary" href="#competences" id="show-skills-link">Voir mes competences</a>
+          </div>
+        </div>
+        <aside class="profile">
+          <div class="profile__photo">
+            <img
+              src="static/photo-profil.jpeg"
+              data-sources="static/photo-profil.jpeg,static/photo-profil.jpg,static/photo-profil.png,static/photo-profil.webp"
+              alt="Photo de profil de Mamadou Coulibaly"
+            >
+            <span hidden>MC</span>
+          </div>
+          <dl>
+            <div>
+              <dt>Diplome</dt>
+              <dd>BTS</dd>
+            </div>
+            <div>
+              <dt>Localisation</dt>
+              <dd>Dakar, Niarry Tally</dd>
+            </div>
+            <div>
+              <dt>Domaine</dt>
+              <dd>Data, serveurs, web</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section about" id="apropos">
+        <div class="section__header">
+          <p class="eyebrow">Presentation</p>
+          <h2>A propos</h2>
+        </div>
+        <div class="about__box">
+          <p>
+            Titulaire d'un BTS, je construis et administre des solutions autour des bases de donnees,
+            des serveurs et du developpement web, avec une attention particuliere a la securite,
+            l'integrite et la performance des donnees.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="competences">
+        <div class="section__header">
+          <p class="eyebrow">Savoir-faire technique</p>
+          <h2>Competences</h2>
+        </div>
+        <div class="skills-summary">
+          <div class="skills-summary__number" data-count="28">28</div>
+          <div>
+            <p class="skills-summary__label">competences techniques</p>
+            <p class="skills-summary__text">
+              Un profil oriente bases de donnees, administration serveur, automatisation et developpement web.
+            </p>
+          </div>
+          <button class="button button--primary" type="button" id="show-skills-button">Voir mes competences</button>
+          <div class="skills skills--collapsible" id="skills-list" hidden>
+            <article>
+              <div class="skill-card__head">
+                <span class="skill-card__icon" aria-hidden="true">DB</span>
+                <div>
+                  <h3>Bases de donnees</h3>
+                  <p>11 competences</p>
+                </div>
+              </div>
+              <ul class="tags">
+                <li>MySQL</li>
+                <li>MySQL Dev</li>
+                <li>Oracle</li>
+                <li>MS SQL Server</li>
+                <li>PostgreSQL</li>
+                <li>PL/PostgreSQL</li>
+                <li>PL/SQL</li>
+                <li>PL/PgSQL</li>
+                <li>Langage SQL</li>
+                <li>SQL</li>
+                <li>Developpement PostgreSQL</li>
+              </ul>
+            </article>
+            <article>
+              <div class="skill-card__head">
+                <span class="skill-card__icon" aria-hidden="true">PY</span>
+                <div>
+                  <h3>Developpement</h3>
+                  <p>7 competences</p>
+                </div>
+              </div>
+              <ul class="tags">
+                <li>Python</li>
+                <li>Django</li>
+                <li>ASP.NET</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Developpement Web</li>
+                <li>Power BI</li>
+              </ul>
+            </article>
+            <article>
+              <div class="skill-card__head">
+                <span class="skill-card__icon" aria-hidden="true">SA</span>
+                <div>
+                  <h3>Systemes & administration</h3>
+                  <p>6 competences</p>
+                </div>
+              </div>
+              <ul class="tags">
+                <li>Windows Server</li>
+                <li>Windows Server avance</li>
+                <li>Linux Serveur</li>
+                <li>PowerShell</li>
+                <li>Linux Shell</li>
+                <li>Clustering</li>
+              </ul>
+            </article>
+            <article>
+              <div class="skill-card__head">
+                <span class="skill-card__icon" aria-hidden="true">MC</span>
+                <div>
+                  <h3>Methodes & conception</h3>
+                  <p>4 competences</p>
+                </div>
+              </div>
+              <ul class="tags">
+                <li>Merise</li>
+                <li>UML</li>
+                <li>Modelisation</li>
+                <li>Schemas relationnels</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projets">
+        <div class="section__header">
+          <p class="eyebrow">Realisations</p>
+          <h2>Projets</h2>
+        </div>
+        <div class="projects">
+          <article>
+            <span class="project-icon" aria-hidden="true">DB</span>
+            <h3>Administration de base de donnees</h3>
+            
+            <ul class="tags">
+              <li>SQL</li>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </article>
+          <article>
+            <span class="project-icon" aria-hidden="true">WEB</span>
+            <h3>Application web</h3>
+
+            <ul class="tags">
+              <li>Python</li>
+              <li>Django</li>
+              <li>HTML/CSS</li>
+            </ul>
+          </article>
+          <article>
+            <span class="project-icon" aria-hidden="true">SRV</span>
+            <h3>Infrastructure serveur</h3>
+            <ul class="tags">
+              <li>Windows Server</li>
+              <li>Linux</li>
+              <li>PowerShell</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--contrast" id="objectifs">
+        <div class="section__header">
+          <p class="eyebrow">Axes professionnels</p>
+          <h2>Mes objectifs</h2>
+        </div>
+        <div class="objectives">
+          <article>
+            <span>01</span>
+            <h3>Securite des donnees</h3>
+            <p>
+              Gerer les droits d'acces, proteger les informations contre les acces non autorises,
+              mettre en place le chiffrement, l'audit et des politiques de controle fiables.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Conception des bases</h3>
+            <p>
+              Concevoir des schemas, tables et relations adaptes aux besoins metier afin de rendre
+              les donnees claires, exploitables et evolutives.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Maintenance et evolution</h3>
+            <p>
+              Appliquer les mises a jour, gerer les migrations, accompagner les montees de version
+              et faire evoluer la capacite de stockage selon les besoins.
+            </p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Integrite des donnees</h3>
+            <p>
+              Garantir la coherence des donnees avec des contraintes, cles, triggers et regles,
+              tout en detectant et corrigeant les anomalies.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact__box">
+          <div class="contact__intro">
+            <div>
+              <p class="eyebrow">Informations personnelles</p>
+              <h2>Contact</h2>
+            </div>
+            <address>
+              <a class="contact-item" href="tel:+221773390720">
+                <span class="contact-icon" aria-hidden="true">☎</span>
+                <span>77 339 07 20</span>
+              </a>
+              <a class="contact-item" href="mailto:mamadou.k.coulibaaly@gmail.com">
+                <span class="contact-icon" aria-hidden="true">@</span>
+                <span>mamadou.k.coulibaaly@gmail.com</span>
+              </a>
+              <span class="contact-item">
+                <span class="contact-icon" aria-hidden="true">⌂</span>
+                <span>Dakar, Niarry Tally</span>
+              </span>
+            </address>
+          </div>
+
+          <form class="contact__form" action="mailto:mamadou.k.coulibaaly@gmail.com" method="post" enctype="text/plain">
+            <div class="form__header">
+              <p class="eyebrow">Votre demande</p>
+              <h3>Laissez vos informations</h3>
+            </div>
+            <label for="username">
+              <span class="field-icon" aria-hidden="true">👤</span>
+              Nom d'utilisateur
+            </label>
+            <input id="username" name="Nom d'utilisateur" type="text" placeholder="Votre nom" required>
+
+            <label for="visitor-address">
+              <span class="field-icon" aria-hidden="true">@</span>
+              Adresse
+            </label>
+            <input id="visitor-address" name="Adresse" type="text" placeholder="Votre adresse ou email" required>
+
+            <label for="visitor-phone">
+              <span class="field-icon" aria-hidden="true">☎</span>
+              Numero de telephone
+            </label>
+            <input id="visitor-phone" name="Telephone" type="tel" placeholder="Votre numero de telephone" required>
+
+            <label for="message">
+              <span class="field-icon" aria-hidden="true">✉</span>
+              Message
+            </label>
+            <textarea id="message" name="Message" rows="5" placeholder="Votre message"></textarea>
+
+            <button class="button button--primary" type="submit">Envoyer</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Mamadou Coulibaly. Portfolio realise avec Python.</p>
+    </footer>
+    <script>
+      const showSkillsLink = document.querySelector("#show-skills-link");
+      const showSkillsButton = document.querySelector("#show-skills-button");
+      const skillsList = document.querySelector("#skills-list");
+      const skillsNumber = document.querySelector(".skills-summary__number");
+      const loadingOverlay = document.querySelector("#loading-overlay");
+      const profilePhoto = document.querySelector(".profile__photo img");
+      const animatedElements = document.querySelectorAll(
+        ".hero__content, .profile, .section__header, .about__box, .skills-summary, .projects article, .objectives article, .contact__box"
+      );
+
+      profilePhoto.addEventListener("error", () => {
+        const sources = profilePhoto.dataset.sources.split(",");
+        const currentIndex = sources.indexOf(profilePhoto.getAttribute("src"));
+        const nextSource = sources[currentIndex + 1];
+
+        if (nextSource) {
+          profilePhoto.src = nextSource;
+          return;
+        }
+
+        profilePhoto.hidden = true;
+        profilePhoto.nextElementSibling.hidden = false;
+      });
+
+      animatedElements.forEach((element) => element.classList.add("reveal"));
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14 }
+      );
+
+      animatedElements.forEach((element) => revealObserver.observe(element));
+
+      function animateCount() {
+        const target = Number(skillsNumber.dataset.count);
+        const duration = 1100;
+        const startTime = performance.now();
+        skillsNumber.textContent = "0";
+
+        function updateCounter(currentTime) {
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const easedProgress = 1 - Math.pow(1 - progress, 3);
+          skillsNumber.textContent = Math.round(target * easedProgress);
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          }
+        }
+
+        requestAnimationFrame(updateCounter);
+      }
+
+      const countObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCount();
+              countObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
+
+      countObserver.observe(skillsNumber);
+
+      function showSkills(event) {
+        if (event) {
+          event.preventDefault();
+        }
+
+        skillsList.hidden = false;
+        requestAnimationFrame(() => skillsList.classList.add("skills--visible"));
+        document.querySelector("#competences").scrollIntoView({ behavior: "smooth", block: "start" });
+        showSkillsButton.textContent = "Competences affichees";
+        showSkillsButton.disabled = true;
+      }
+
+      function showLoading() {
+        loadingOverlay.classList.add("is-loading");
+        loadingOverlay.setAttribute("aria-hidden", "false");
+
+        window.clearTimeout(showLoading.timer);
+        showLoading.timer = window.setTimeout(() => {
+          loadingOverlay.classList.remove("is-loading");
+          loadingOverlay.setAttribute("aria-hidden", "true");
+        }, 850);
+      }
+
+      document.addEventListener("click", (event) => {
+        const clickableElement = event.target.closest("a, button");
+
+        if (clickableElement) {
+          showLoading();
+        }
+      });
+
+      document.querySelector(".contact__form").addEventListener("submit", showLoading);
+
+      showSkillsLink.addEventListener("click", showSkills);
+      showSkillsButton.addEventListener("click", showSkills);
+    </script>
+  </body>
+</html>
