@@ -3,427 +3,477 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mamadou Coulibaly | Portfolio</title>
+    <title>Mamadou Lamarana Diallo | Portfolio</title>
     <meta
       name="description"
-      content="Portfolio professionnel de Mamadou Coulibaly, titulaire d'un BTS, specialise en bases de donnees, administration serveur et developpement web."
+      content="Portfolio personnel de Lamarana Diallo, etudiant en informatique specialise en bases de donnees, SQL, Oracle SQL, Merise, administration systeme, Docker et developpement web."
     >
     <link rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js" defer></script>
   </head>
   <body>
-    <div class="loading-overlay" id="loading-overlay" aria-live="polite" aria-hidden="true">
-      <div class="loading-card" role="status">
-        <div class="loading-logo" aria-hidden="true">MC</div>
-        <p>Chargement en cours</p>
-        <span class="loading-line" aria-hidden="true"></span>
+    <div class="preloader" id="preloader">
+      <div class="preloader-circle">
+        <div class="preloader-logo">LD</div>
       </div>
     </div>
 
-    <header class="topbar">
-      <a class="brand" href="#accueil">Mamadou Coulibaly</a>
-      <nav aria-label="Navigation principale">
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-database" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="5" rx="8" ry="3"></ellipse>
+        <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path>
+        <path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path>
+      </symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="m9 18-6-6 6-6"></path>
+        <path d="m15 6 6 6-6 6"></path>
+      </symbol>
+      <symbol id="icon-server" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="6" rx="2"></rect>
+        <rect x="4" y="14" width="16" height="6" rx="2"></rect>
+        <path d="M8 7h.01M8 17h.01"></path>
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+        <path d="m3 7 9 6 9-6"></path>
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path>
+      </symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+        <path d="m18 15-6-6-6 6"></path>
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24">
+        <path d="M14 3h7v7"></path>
+        <path d="M10 14 21 3"></path>
+        <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"></path>
+      </symbol>
+      <symbol id="icon-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16"></path>
+      </symbol>
+      <symbol id="icon-oracle" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-5.5l6-4.5-6-4.5v9z"></path>
+      </symbol>
+      <symbol id="icon-sql-server" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path>
+      </symbol>
+      <symbol id="icon-postgresql" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+      </symbol>
+      <symbol id="icon-mongodb" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"></path>
+      </symbol>
+      <symbol id="icon-docker" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"></path>
+      </symbol>
+      <symbol id="icon-powerbi" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path>
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+      </symbol>
+      <symbol id="icon-windows" viewBox="0 0 24 24">
+        <path d="M0 3.449L9.75 2.1v9.451H0V3.449zm10.949-1.605L24 0v11.4H10.949V1.844zM0 12.6h9.75v9.451L0 20.699V12.6zm10.949 0H24V24l-13.051-1.844V12.6z"></path>
+      </symbol>
+      <symbol id="icon-django" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path>
+      </symbol>
+      <symbol id="icon-aspnet" viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path>
+      </symbol>
+    </svg>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#accueil" aria-label="Retour a l'accueil">
+        <span>LD</span>
+        Mamadou Lamarana Diallo
+      </a>
+
+      <button class="nav-toggle" type="button" data-nav-toggle aria-label="Ouvrir le menu">
+        <svg class="icon"><use href="#icon-menu"></use></svg>
+      </button>
+
+      <nav class="site-nav" data-nav aria-label="Navigation principale">
         <a href="#accueil">Accueil</a>
-        <a href="#apropos">A propos</a>
-        <a href="#competences">Competences</a>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
         <a href="#projets">Projets</a>
-        <a href="#objectifs">Objectifs</a>
+        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main id="accueil">
-      <section class="hero">
-        <div class="hero__content">
-          <p class="eyebrow">Administrateur bases de donnees & developpeur web</p>
-          <h1>Mamadou Coulibaly</h1>
+    <main>
+      <section class="hero section" id="accueil">
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero__content reveal">
+          <p class="eyebrow">Mamadou Lamarana Diallo</p>
+          <h1 id="typing-name">Lamarana Diallo</h1>
+          <p class="hero__title">Administrateur de Bases de Données | Administrateur Système | Développeur Web | Data Analyst</p>
           <p class="hero__text">
-            Portfolio professionnel oriente bases de donnees, administration serveur et developpement web.
+            Transformer les données en solutions performantes. Passionné par les bases de données, l'administration système, l'analyse de données et le développement web.
           </p>
-          <div class="hero__actions" aria-label="Actions">
-            <a class="button button--primary" href="#contact">Me contacter</a>
-            <a class="button button--secondary" href="#competences" id="show-skills-link">Voir mes competences</a>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#contact">
+              <svg class="icon"><use href="#icon-mail"></use></svg>
+              Me contacter
+            </a>
+            <a class="button button--secondary" href="cv-lamarana-diallo.pdf" download>
+              Télécharger mon CV
+            </a>
           </div>
         </div>
-        <aside class="profile">
-          <div class="profile__photo">
+
+        <aside class="profile-card reveal">
+          <div class="profile-photo">
             <img
-              src="static/photo-profil.jpeg"
-              data-sources="static/photo-profil.jpeg,static/photo-profil.jpg,static/photo-profil.png,static/photo-profil.webp"
-              alt="Photo de profil de Mamadou Coulibaly"
+              src="static/image.png"
+              data-sources="static/image.png,static/photo-profil.jpeg,static/photo-profil.jpg,static/photo-profil.png,static/photo-profil.webp,image.png"
+              alt="Photo de profil de Mamadou Lamarana Diallo"
             >
-            <span hidden>MC</span>
+            <span hidden>LD</span>
           </div>
-          <dl>
-            <div>
-              <dt>Diplome</dt>
-              <dd>BTS</dd>
-            </div>
-            <div>
-              <dt>Localisation</dt>
-              <dd>Dakar, Niarry Tally</dd>
-            </div>
-            <div>
-              <dt>Domaine</dt>
-              <dd>Data, serveurs, web</dd>
-            </div>
-          </dl>
+          <div class="profile-card__body">
+            <p>Specialite</p>
+            <strong>Bases de donnees & systemes</strong>
+            <span>Dakar, Rufisque - Sangalkam</span>
+          </div>
         </aside>
       </section>
 
-      <section class="section about" id="apropos">
-        <div class="section__header">
-          <p class="eyebrow">Presentation</p>
-          <h2>A propos</h2>
+      <section class="section" id="apropos">
+        <div class="section__header reveal">
+          <p class="eyebrow">À propos</p>
+          <h2>Passionné par les données et les systèmes</h2>
         </div>
-        <div class="about__box">
-          <p>
-            Titulaire d'un BTS, je construis et administre des solutions autour des bases de donnees,
-            des serveurs et du developpement web, avec une attention particuliere a la securite,
-            l'integrite et la performance des donnees.
-          </p>
+        <div class="about-grid">
+          <article class="about-card reveal">
+            <svg class="icon-card"><use href="#icon-database"></use></svg>
+            <h3>Mon parcours</h3>
+            <p>
+              Étudiant en informatique passionné par les bases de données, l'administration système, le développement web et l'analyse de données. Je construis progressivement une expertise solide dans ces domaines complémentaires.
+            </p>
+          </article>
+          <article class="about-card reveal">
+            <svg class="icon-card"><use href="#icon-code"></use></svg>
+            <h3>Ma passion</h3>
+            <p>
+              Les bases de données m'intéressent pour leur précision : concevoir des modèles de données clairs, écrire du SQL optimisé et transformer les données en informations exploitables pour prendre des décisions éclairées.
+            </p>
+          </article>
+          <article class="about-card reveal">
+            <svg class="icon-card"><use href="#icon-server"></use></svg>
+            <h3>Mes objectifs</h3>
+            <p>
+              Devenir un Administrateur de Bases de Données (DBA), un Administrateur Système, un Développeur Web et un Analyste de Données pour accompagner les entreprises dans leur transformation digitale.
+            </p>
+          </article>
         </div>
       </section>
 
-      <section class="section" id="competences">
-        <div class="section__header">
-          <p class="eyebrow">Savoir-faire technique</p>
-          <h2>Competences</h2>
+      <section class="section section--soft" id="competences">
+        <div class="section__header reveal">
+          <p class="eyebrow">Compétences</p>
+          <h2>Mes compétences techniques</h2>
         </div>
-        <div class="skills-summary">
-          <div class="skills-summary__number" data-count="28">28</div>
-          <div>
-            <p class="skills-summary__label">competences techniques</p>
-            <p class="skills-summary__text">
-              Un profil oriente bases de donnees, administration serveur, automatisation et developpement web.
-            </p>
+        
+        <div class="skills-category reveal">
+          <h3 class="skills-category-title">Bases de données</h3>
+          <div class="skills-grid">
+            <div class="skill reveal" data-level="95">
+              <span>SQL</span>
+              <svg class="icon-card"><use href="#icon-database"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="90">
+              <span>Oracle Database</span>
+              <svg class="icon-card"><use href="#icon-oracle"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="88">
+              <span>SQL Server</span>
+              <svg class="icon-card"><use href="#icon-sql-server"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="85">
+              <span>PostgreSQL</span>
+              <svg class="icon-card"><use href="#icon-postgresql"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="82">
+              <span>MongoDB</span>
+              <svg class="icon-card"><use href="#icon-mongodb"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
           </div>
-          <button class="button button--primary" type="button" id="show-skills-button">Voir mes competences</button>
-          <div class="skills skills--collapsible" id="skills-list" hidden>
-            <article>
-              <div class="skill-card__head">
-                <span class="skill-card__icon" aria-hidden="true">DB</span>
-                <div>
-                  <h3>Bases de donnees</h3>
-                  <p>11 competences</p>
-                </div>
-              </div>
-              <ul class="tags">
-                <li>MySQL</li>
-                <li>MySQL Dev</li>
-                <li>Oracle</li>
-                <li>MS SQL Server</li>
-                <li>PostgreSQL</li>
-                <li>PL/PostgreSQL</li>
-                <li>PL/SQL</li>
-                <li>PL/PgSQL</li>
-                <li>Langage SQL</li>
-                <li>SQL</li>
-                <li>Developpement PostgreSQL</li>
-              </ul>
-            </article>
-            <article>
-              <div class="skill-card__head">
-                <span class="skill-card__icon" aria-hidden="true">PY</span>
-                <div>
-                  <h3>Developpement</h3>
-                  <p>7 competences</p>
-                </div>
-              </div>
-              <ul class="tags">
-                <li>Python</li>
-                <li>Django</li>
-                <li>ASP.NET</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Developpement Web</li>
-                <li>Power BI</li>
-              </ul>
-            </article>
-            <article>
-              <div class="skill-card__head">
-                <span class="skill-card__icon" aria-hidden="true">SA</span>
-                <div>
-                  <h3>Systemes & administration</h3>
-                  <p>6 competences</p>
-                </div>
-              </div>
-              <ul class="tags">
-                <li>Windows Server</li>
-                <li>Windows Server avance</li>
-                <li>Linux Serveur</li>
-                <li>PowerShell</li>
-                <li>Linux Shell</li>
-                <li>Clustering</li>
-              </ul>
-            </article>
-            <article>
-              <div class="skill-card__head">
-                <span class="skill-card__icon" aria-hidden="true">MC</span>
-                <div>
-                  <h3>Methodes & conception</h3>
-                  <p>4 competences</p>
-                </div>
-              </div>
-              <ul class="tags">
-                <li>Merise</li>
-                <li>UML</li>
-                <li>Modelisation</li>
-                <li>Schemas relationnels</li>
-              </ul>
-            </article>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3 class="skills-category-title">Modélisation</h3>
+          <div class="skills-grid">
+            <div class="skill reveal" data-level="90">
+              <span>Méthode Mérise</span>
+              <svg class="icon-card"><use href="#icon-database"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="85">
+              <span>UML</span>
+              <svg class="icon-card"><use href="#icon-code"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3 class="skills-category-title">Systèmes</h3>
+          <div class="skills-grid">
+            <div class="skill reveal" data-level="80">
+              <span>Windows Server</span>
+              <svg class="icon-card"><use href="#icon-windows"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="82">
+              <span>PowerShell</span>
+              <svg class="icon-card"><use href="#icon-server"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3 class="skills-category-title">Développement</h3>
+          <div class="skills-grid">
+            <div class="skill reveal" data-level="75">
+              <span>HTML5</span>
+              <svg class="icon-card"><use href="#icon-code"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="72">
+              <span>CSS3</span>
+              <svg class="icon-card"><use href="#icon-code"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="70">
+              <span>JavaScript</span>
+              <svg class="icon-card"><use href="#icon-code"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="72">
+              <span>Python</span>
+              <svg class="icon-card"><use href="#icon-code"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="50">
+              <span>Langage C</span>
+              <svg class="icon-card"><use href="#icon-code"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="70">
+              <span>ASP.NET Core</span>
+              <svg class="icon-card"><use href="#icon-aspnet"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="68">
+              <span>Django</span>
+              <svg class="icon-card"><use href="#icon-django"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-category reveal">
+          <h3 class="skills-category-title">Data & Outils</h3>
+          <div class="skills-grid">
+            <div class="skill reveal" data-level="75">
+              <span>Power BI</span>
+              <svg class="icon-card"><use href="#icon-powerbi"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="80">
+              <span>Git</span>
+              <svg class="icon-card"><use href="#icon-github"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="80">
+              <span>GitHub</span>
+              <svg class="icon-card"><use href="#icon-github"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
+            <div class="skill reveal" data-level="78">
+              <span>Docker</span>
+              <svg class="icon-card"><use href="#icon-docker"></use></svg>
+              <div class="progress"><span></span></div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="projets">
-        <div class="section__header">
-          <p class="eyebrow">Realisations</p>
-          <h2>Projets</h2>
+        <div class="section__header reveal">
+          <p class="eyebrow">Projets</p>
+          <h2>Mes projets</h2>
         </div>
-        <div class="projects">
-          <article>
-            <span class="project-icon" aria-hidden="true">DB</span>
-            <h3>Administration de base de donnees</h3>
-            
-            <ul class="tags">
-              <li>SQL</li>
-              <li>MySQL</li>
-              <li>PostgreSQL</li>
-            </ul>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <svg class="icon-card"><use href="#icon-database"></use></svg>
+            <h3>Gestion de Scolarité</h3>
+            <p>Système de gestion scolaire complet avec suivi des étudiants, notes, absences et bulletins. Développé avec ASP.NET Core et SQL Server.</p>
+            <a class="project-link" href="https://github.com/lamaranadiallo/gestion-scolarite" target="_blank" rel="noopener noreferrer">
+              Voir sur GitHub
+              <svg class="icon"><use href="#icon-github"></use></svg>
+            </a>
           </article>
-          <article>
-            <span class="project-icon" aria-hidden="true">WEB</span>
-            <h3>Application web</h3>
-
-            <ul class="tags">
-              <li>Python</li>
-              <li>Django</li>
-              <li>HTML/CSS</li>
-            </ul>
-          </article>
-          <article>
-            <span class="project-icon" aria-hidden="true">SRV</span>
-            <h3>Infrastructure serveur</h3>
-            <ul class="tags">
-              <li>Windows Server</li>
-              <li>Linux</li>
-              <li>PowerShell</li>
-            </ul>
+          <article class="project-card reveal">
+            <svg class="icon-card"><use href="#icon-code"></use></svg>
+            <h3>Bibliothèque</h3>
+            <p>Système de gestion de bibliothèque avec catalogue de livres, emprunts, retours et gestion des adhérents. Développé avec ASP.NET Core et SQL Server.</p>
+            <a class="project-link" href="https://github.com/lamaranadiallo/bibliotheque" target="_blank" rel="noopener noreferrer">
+              Voir sur GitHub
+              <svg class="icon"><use href="#icon-github"></use></svg>
+            </a>
           </article>
         </div>
       </section>
 
-      <section class="section section--contrast" id="objectifs">
-        <div class="section__header">
-          <p class="eyebrow">Axes professionnels</p>
-          <h2>Mes objectifs</h2>
+      <section class="section" id="services">
+        <div class="section__header reveal">
+          <p class="eyebrow">Services</p>
+          <h2>Mes services</h2>
         </div>
-        <div class="objectives">
-          <article>
-            <span>01</span>
-            <h3>Securite des donnees</h3>
-            <p>
-              Gerer les droits d'acces, proteger les informations contre les acces non autorises,
-              mettre en place le chiffrement, l'audit et des politiques de controle fiables.
-            </p>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <svg class="icon-card"><use href="#icon-database"></use></svg>
+            <h3>Administration de Bases de Données</h3>
+            <p>Installation, configuration, optimisation et maintenance de bases de données SQL et NoSQL.</p>
           </article>
-          <article>
-            <span>02</span>
-            <h3>Conception des bases</h3>
-            <p>
-              Concevoir des schemas, tables et relations adaptes aux besoins metier afin de rendre
-              les donnees claires, exploitables et evolutives.
-            </p>
+          <article class="service-card reveal">
+            <svg class="icon-card"><use href="#icon-code"></use></svg>
+            <h3>Modélisation de Données</h3>
+            <p>Conception de modèles de données avec Mérise et UML pour des structures optimisées.</p>
           </article>
-          <article>
-            <span>03</span>
-            <h3>Maintenance et evolution</h3>
-            <p>
-              Appliquer les mises a jour, gerer les migrations, accompagner les montees de version
-              et faire evoluer la capacite de stockage selon les besoins.
-            </p>
+          <article class="service-card reveal">
+            <svg class="icon-card"><use href="#icon-server"></use></svg>
+            <h3>Administration Système Windows</h3>
+            <p>Gestion de serveurs Windows Server, déploiement et maintenance avec PowerShell.</p>
           </article>
-          <article>
-            <span>04</span>
-            <h3>Integrite des donnees</h3>
-            <p>
-              Garantir la coherence des donnees avec des contraintes, cles, triggers et regles,
-              tout en detectant et corrigeant les anomalies.
-            </p>
+          <article class="service-card reveal">
+            <svg class="icon-card"><use href="#icon-code"></use></svg>
+            <h3>Développement Web</h3>
+            <p>Création de sites web modernes avec HTML5, CSS3, JavaScript et frameworks comme ASP.NET Core et Django.</p>
+          </article>
+          <article class="service-card reveal">
+            <svg class="icon-card"><use href="#icon-database"></use></svg>
+            <h3>Analyse de Données</h3>
+            <p>Analyse et visualisation de données avec Power BI pour créer des tableaux de bord interactifs.</p>
+          </article>
+          <article class="service-card reveal">
+            <svg class="icon-card"><use href="#icon-code"></use></svg>
+            <h3>Création de Tableaux de Bord Power BI</h3>
+            <p>Conception de tableaux de bord professionnels pour la prise de décision basée sur les données.</p>
           </article>
         </div>
       </section>
 
-      <section class="section contact" id="contact">
-        <div class="contact__box">
-          <div class="contact__intro">
-            <div>
-              <p class="eyebrow">Informations personnelles</p>
-              <h2>Contact</h2>
+      <section class="section section--soft" id="contact">
+        <div class="section__header reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Travaillons ensemble</h2>
+        </div>
+        <div class="contact-grid">
+          <address class="contact-info reveal">
+            <a href="mailto:lamarana.diallo@example.com">
+              <svg class="icon"><use href="#icon-mail"></use></svg>
+              <span>lamaranamamadousdiallo@gmail.com</span>
+            </a>
+            <a href="tel:+221770000000">
+              <svg class="icon"><use href="#icon-phone"></use></svg>
+              <span>+221 761863108</span>
+            </a>
+            <span>
+              <svg class="icon"><use href="#icon-server"></use></svg>
+              Dakar, Sénégal
+            </span>
+            <div class="socials" aria-label="Réseaux sociaux">
+              <a href="https://github.com/nito12973-hue" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+              <a href="https://linkedin.com/in/lamarana-diallo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+              <a href="https://wa.me/221761863108" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
             </div>
-            <address>
-              <a class="contact-item" href="tel:+221773390720">
-                <span class="contact-icon" aria-hidden="true">☎</span>
-                <span>77 339 07 20</span>
-              </a>
-              <a class="contact-item" href="mailto:mamadou.k.coulibaaly@gmail.com">
-                <span class="contact-icon" aria-hidden="true">@</span>
-                <span>mamadou.k.coulibaaly@gmail.com</span>
-              </a>
-              <span class="contact-item">
-                <span class="contact-icon" aria-hidden="true">⌂</span>
-                <span>Dakar, Niarry Tally</span>
-              </span>
-            </address>
-          </div>
+          </address>
 
-          <form class="contact__form" action="mailto:mamadou.k.coulibaaly@gmail.com" method="post" enctype="text/plain">
-            <div class="form__header">
-              <p class="eyebrow">Votre demande</p>
-              <h3>Laissez vos informations</h3>
-            </div>
-            <label for="username">
-              <span class="field-icon" aria-hidden="true">👤</span>
-              Nom d'utilisateur
-            </label>
-            <input id="username" name="Nom d'utilisateur" type="text" placeholder="Votre nom" required>
+          <form class="contact-form reveal" data-contact-form>
+            <label for="name">Nom</label>
+            <input id="name" name="name" type="text" placeholder="Votre nom" required>
 
-            <label for="visitor-address">
-              <span class="field-icon" aria-hidden="true">@</span>
-              Adresse
-            </label>
-            <input id="visitor-address" name="Adresse" type="text" placeholder="Votre adresse ou email" required>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="votre@email.com" required>
 
-            <label for="visitor-phone">
-              <span class="field-icon" aria-hidden="true">☎</span>
-              Numero de telephone
-            </label>
-            <input id="visitor-phone" name="Telephone" type="tel" placeholder="Votre numero de telephone" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
 
-            <label for="message">
-              <span class="field-icon" aria-hidden="true">✉</span>
-              Message
-            </label>
-            <textarea id="message" name="Message" rows="5" placeholder="Votre message"></textarea>
-
-            <button class="button button--primary" type="submit">Envoyer</button>
+            <button class="button button--primary" type="submit">Envoyer le message</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
           </form>
         </div>
       </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Mamadou Coulibaly. Portfolio realise avec Python.</p>
+    <button class="back-to-top" type="button" data-back-to-top aria-label="Retour en haut">
+      <svg class="icon"><use href="#icon-arrow-up"></use></svg>
+    </button>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">Lamarana Diallo</h3>
+          <p class="footer-description">Administrateur de Bases de Données | Administrateur Système | Développeur Web | Data Analyst</p>
+          <div class="footer-socials">
+            <a href="https://github.com/nito12973-hue" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg class="icon"><use href="#icon-github"></use></svg>
+            </a>
+            <a href="https://linkedin.com/in/lamarana-diallo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg class="icon"><use href="#icon-server"></use></svg>
+            </a>
+            <a href="https://wa.me/221761863108" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg class="icon"><use href="#icon-phone"></use></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Contact</h3>
+          <ul class="footer-contact">
+            <li>
+              <svg class="icon"><use href="#icon-phone"></use></svg>
+              <a href="tel:+221761863108">+221 761863108</a>
+            </li>
+            <li>
+              <svg class="icon"><use href="#icon-mail"></use></svg>
+              <a href="mailto:lamaranamamadousdiallo@gmail.com">lamaranamamadousdiallo@gmail.com</a>
+            </li>
+            <li>
+              <svg class="icon"><use href="#icon-server"></use></svg>
+              <span>Dakar, Sénégal</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Navigation</h3>
+          <ul class="footer-nav">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mamadou Lamarana Diallo. Tous droits réservés.</p>
+        <p>Portfolio moderne en HTML5, CSS3 et JavaScript pur.</p>
+      </div>
     </footer>
-    <script>
-      const showSkillsLink = document.querySelector("#show-skills-link");
-      const showSkillsButton = document.querySelector("#show-skills-button");
-      const skillsList = document.querySelector("#skills-list");
-      const skillsNumber = document.querySelector(".skills-summary__number");
-      const loadingOverlay = document.querySelector("#loading-overlay");
-      const profilePhoto = document.querySelector(".profile__photo img");
-      const animatedElements = document.querySelectorAll(
-        ".hero__content, .profile, .section__header, .about__box, .skills-summary, .projects article, .objectives article, .contact__box"
-      );
-
-      profilePhoto.addEventListener("error", () => {
-        const sources = profilePhoto.dataset.sources.split(",");
-        const currentIndex = sources.indexOf(profilePhoto.getAttribute("src"));
-        const nextSource = sources[currentIndex + 1];
-
-        if (nextSource) {
-          profilePhoto.src = nextSource;
-          return;
-        }
-
-        profilePhoto.hidden = true;
-        profilePhoto.nextElementSibling.hidden = false;
-      });
-
-      animatedElements.forEach((element) => element.classList.add("reveal"));
-
-      const revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.14 }
-      );
-
-      animatedElements.forEach((element) => revealObserver.observe(element));
-
-      function animateCount() {
-        const target = Number(skillsNumber.dataset.count);
-        const duration = 1100;
-        const startTime = performance.now();
-        skillsNumber.textContent = "0";
-
-        function updateCounter(currentTime) {
-          const progress = Math.min((currentTime - startTime) / duration, 1);
-          const easedProgress = 1 - Math.pow(1 - progress, 3);
-          skillsNumber.textContent = Math.round(target * easedProgress);
-
-          if (progress < 1) {
-            requestAnimationFrame(updateCounter);
-          }
-        }
-
-        requestAnimationFrame(updateCounter);
-      }
-
-      const countObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animateCount();
-              countObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.6 }
-      );
-
-      countObserver.observe(skillsNumber);
-
-      function showSkills(event) {
-        if (event) {
-          event.preventDefault();
-        }
-
-        skillsList.hidden = false;
-        requestAnimationFrame(() => skillsList.classList.add("skills--visible"));
-        document.querySelector("#competences").scrollIntoView({ behavior: "smooth", block: "start" });
-        showSkillsButton.textContent = "Competences affichees";
-        showSkillsButton.disabled = true;
-      }
-
-      function showLoading() {
-        loadingOverlay.classList.add("is-loading");
-        loadingOverlay.setAttribute("aria-hidden", "false");
-
-        window.clearTimeout(showLoading.timer);
-        showLoading.timer = window.setTimeout(() => {
-          loadingOverlay.classList.remove("is-loading");
-          loadingOverlay.setAttribute("aria-hidden", "true");
-        }, 850);
-      }
-
-      document.addEventListener("click", (event) => {
-        const clickableElement = event.target.closest("a, button");
-
-        if (clickableElement) {
-          showLoading();
-        }
-      });
-
-      document.querySelector(".contact__form").addEventListener("submit", showLoading);
-
-      showSkillsLink.addEventListener("click", showSkills);
-      showSkillsButton.addEventListener("click", showSkills);
-    </script>
   </body>
 </html>

@@ -18,7 +18,7 @@ class PortfolioHandler(SimpleHTTPRequestHandler):
 
 def main():
     server = ThreadingHTTPServer((HOST, PORT), PortfolioHandler)
-    print(f"Portfolio de Mamadou Coulibaly: http://{HOST}:{PORT}")
+    print(f"Portfolio de Lamarana Diallo: http://{HOST}:{PORT}")
     print("Appuyez sur Ctrl+C pour arreter le serveur.")
     server.serve_forever()
 
